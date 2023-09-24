@@ -1,60 +1,24 @@
 import React from 'react';
+import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
-import { NavLink } from 'react-router-dom';
-import { FaTwitter, FaInstagram } from 'react-icons/fa';
-import Logo from "../../assets/images/Logo.png";
 
 
-import "../navbar/style.css"
+import {NavLink} from 'react-router-dom';
 
-function TabsExample() {
+
+
+
+export default function ContainerInsideExample() {
   return (
-    <Navbar variant="tabs" defaultactivekey="/home">
-      <Navbar.Brand href="/">
-        <img
-          src={Logo}
-          alt="Logo"
-          height="20"
-          className="d-inline-block align-top mt-1"
-        />
-      </Navbar.Brand>
-      <Navbar.Toggle aria-controls="basic-navbar-nav" />
-      <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="mr-auto">
-          <Nav.Item>
-            <NavLink to="/home" className="nav-link" activeclassname="active">Home</NavLink>
-          </Nav.Item>
-          <Nav.Item>
-            <NavLink to="/about" className="nav-link" activeclassname="active">About</NavLink>
-          </Nav.Item>
-          <Nav.Item>
-            <NavLink to="/train" className="nav-link" activeclassname="active">Train</NavLink>
-          </Nav.Item>
-          <Nav.Item>
-            <NavLink to="/contact" className="nav-link" activeclassname="active">Contact</NavLink>
-          </Nav.Item>
-        </Nav>
-        <Nav className="ml-auto"> {/* Use ml-auto class to move the NavDropdown to the right */}
-          <Nav.Item>
-            <NavLink to="https://twitter.com/301catching" target="_blank" rel="noopener noreferrer" className="nav-link">
-              <FaTwitter size={20} />
-            </NavLink>
-          </Nav.Item>
-          <Nav.Item>
-            <NavLink to="https://www.instagram.com/301_catching/" target="_blank" rel="noopener noreferrer" className="nav-link">
-              <FaInstagram size={20} />
-            </NavLink>
-          </Nav.Item>
-          <NavDropdown className="dropdown" title="MEMBERS" id="basic-nav-dropdown">
-            <NavDropdown.Item as={NavLink} to="/login">Login</NavDropdown.Item>
-            <NavDropdown.Item as={NavLink} to="/signup">Sign Up</NavDropdown.Item>
-          </NavDropdown>
-        </Nav>
-      </Navbar.Collapse>
+    <Navbar expand="lg" className="bg-black">
+      <Container>
+        <Navbar.Brand href="#">Navbar</Navbar.Brand>
+        <Nav.Link as={NavLink} to="/">
+                Home
+              </Nav.Link>
+      </Container>
     </Navbar>
   );
 }
 
-export default TabsExample;

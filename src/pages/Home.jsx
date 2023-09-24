@@ -1,6 +1,8 @@
 import React from "react";
 import Cover from "../assets/images/Cover.png";
 
+
+
 export default function Header() {
   const bgImageHeader = {
     backgroundImage: `url(${Cover})`,

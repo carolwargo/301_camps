@@ -4,7 +4,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from './pages/Home';
 import Navbar from './components/navbar/index.jsx';
 
-
+import './App.css';
 function App() {
   return (
     <BrowserRouter>
