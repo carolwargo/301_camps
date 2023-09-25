@@ -11,13 +11,14 @@ import "../style/navbar.css"
 
 function TabsExample() {
   return (
+    <div>
     <Navbar variant="tabs" defaultactivekey="/home">
       <Navbar.Brand href="/">
         <img
           src={Logo}
           alt="Logo"
           height="20"
-          className="d-inline-block align-top mt-1"
+          className="d-inline-block align-top mt-1 ml-3"
         />
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -54,6 +55,7 @@ function TabsExample() {
         </Nav>
       </Navbar.Collapse>
     </Navbar>
+    </div>
   );
 }
 

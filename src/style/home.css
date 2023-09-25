@@ -19,7 +19,7 @@
   color: white;
   text-align: left;
   position: relative;
-  height: 80vh;
+  height: 100vh;
 }
 
 /*checked*/
@@ -28,7 +28,7 @@
   position: absolute;
   left: 0;
   top: 0;
-  width: 90%;
+  width: 100%;
   height: 100%;
   background-image: url("../assets/images/Cover.png");
   background-size: cover;
@@ -66,18 +66,18 @@
 .main-col .content-container {
   position: absolute;
   top: 20%;
-  transform: translateY(10%) !important;
+  transform: translateY(-10%) !important;
   transform: translateX(1%);
-  padding: 0 5%;
+  padding-left: 5%;
   width: 100%;
 }
-
-/* h1-"301_Catching", p-"Master your craft..."  */
-/*stop image from bleeding throught text*/
-.content-container {
-  position: relative;
+.main-col .content-container h1 {
+  font-size: 4.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  font-family: 'bellota text';
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.75);
 }
-
 
 
 .red-text {
@@ -88,22 +88,22 @@
 
 /* Home.css */
 .signup-btn {
-  background-color: red;
-  color: white;
+  width: 100% !important;
+  background-color: red !important;
+  color: white !important;
   border: none;
-  padding: 5px 10px;
-  cursor: pointer;
+  padding: 10px 100px !important;
+  cursor: pointer !important;
   text-decoration: none;
-  font-size: 15px;
-  font-weight: bold;
-  border-radius: 5px;
-  margin-top: 10px !important;
+  font-size: 25px !important;
+  font-weight: bold !important;
+  border-radius: 5px !important;
   box-shadow: 3px 3px 3px rgb(168, 168, 149) !important; /* Add the box shadow */
 }
 
 .signup-btn:hover {
-  background-color: white;
-  color: red;
+  background-color: white !important;
+  color: red !important;
 }
 
 /* FORM styling */
