@@ -1,0 +1,177 @@
+/*checked*/
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+/*checked*/
+.container-body {
+  margin: 0;
+  font-family: "Poppins";
+  width: 100vw;
+}
+
+/*checked*/
+/*"background" is the transparency*/
+.main-col {
+  background: black;
+  color: white;
+  text-align: left;
+  position: relative;
+  height: 80vh;
+}
+
+/*checked*/
+.main-col:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 90%;
+  height: 100%;
+  background-image: url("../assets/images/Cover.png");
+  background-size: cover;
+  background-position: 100%;
+  opacity: .55;
+}
+
+/*checked*/
+.main-col .content-container {
+  position: absolute;
+  
+  transform: translateY(-40%);
+  transform: translateX(1%);
+  width: 100%;
+}
+
+
+  
+/*Includes, Image with trans, h1, p, and form-container*/
+/* position relative on parent^, position absolute on child*/
+.main-col:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-image: url("../assets/images/Cover.png");
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  background-position: 80%;
+  opacity: 0.55;
+}
+
+/*checked*/
+.main-col .content-container {
+  position: absolute;
+  top: 20%;
+  transform: translateY(10%) !important;
+  transform: translateX(1%);
+  padding: 0 5%;
+  width: 100%;
+}
+
+/* h1-"301_Catching", p-"Master your craft..."  */
+/*stop image from bleeding throught text*/
+.content-container {
+  position: relative;
+}
+
+
+
+.red-text {
+  color: red;
+}
+
+
+
+/* Home.css */
+.signup-btn {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-top: 10px !important;
+  box-shadow: 3px 3px 3px rgb(168, 168, 149) !important; /* Add the box shadow */
+}
+
+.signup-btn:hover {
+  background-color: white;
+  color: red;
+}
+
+/* FORM styling */
+.form-group.mb-3 {
+  margin-top: 10rem;
+}
+
+.register-form button {
+  background-color: red !important;
+}
+
+
+.register-form-col {
+  margin-top: 5px !important;
+  color: white;
+ 
+}
+.register-form {
+  background-color: black !important;
+  color: white!important;
+  padding: 1rem !important;
+}
+
+.form-text {
+  color: white !important;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+}
+
+.learn-more-anchor {
+  margin-top: 3rem !important;
+}
+
+button {
+  width: auto;
+  padding: 1em 2.5em;
+}
+
+.who-container {
+  background-color: black;
+  padding: 10px;
+}
+
+.learn-more-container {
+  background-color: black;
+  padding: 10px;
+  margin-top: 1rem !important;
+  margin-bottom: 1rem !important;
+  width: 35%!important;
+  text-align: center;
+  color: white;
+}
+
+.learn-more-container h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: .5rem;
+}
+
+.learn-more-container p {
+  font-size: 1rem;
+  font-weight: 200;
+}
+
+.learn-more-container h4 {
+  font-size: 1rem;
+  font-weight: 200;
+}
