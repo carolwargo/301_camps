@@ -11,8 +11,8 @@ export default function Header(){
 
 
     return (
-        <header>
+        <div>
            <NavBar/>
-        </header>
+        </div>
     )
 }

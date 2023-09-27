@@ -4,7 +4,8 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { NavLink } from 'react-router-dom';
 import { FaTwitter, FaInstagram } from 'react-icons/fa';
-import Logo from "../assets/images/Logo.png";
+import Logo2 from "../assets/images/Logo2.png";
+import Container from 'react-bootstrap/Container';
 
 
 import "../style/navbar.css"
@@ -12,18 +13,21 @@ import "../style/navbar.css"
 function TabsExample() {
   return (
     <div>
+      <Container>
     <Navbar variant="tabs" defaultactivekey="/home">
-      <Navbar.Brand href="/">
-        <img
-          src={Logo}
-          alt="Logo"
-          height="20"
-          className="d-inline-block align-top mt-1 ml-3"
-        />
-      </Navbar.Brand>
+     
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
+    
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
+        <Navbar.Brand href="/">
+        <img
+          src={Logo2}
+          alt="Logo2"
+          height="30"
+          className="d-inline-block align-top ml-3"
+        />
+      </Navbar.Brand>
           <Nav.Item>
             <NavLink to="/home" className="nav-link" activeclassname="active">Home</NavLink>
           </Nav.Item>
@@ -31,7 +35,7 @@ function TabsExample() {
             <NavLink to="/about" className="nav-link" activeclassname="active">About</NavLink>
           </Nav.Item>
           <Nav.Item>
-            <NavLink to="/train" className="nav-link" activeclassname="active">Train</NavLink>
+            <NavLink to="/train" className="nav-link" activeclassname="active">Clinics</NavLink>
           </Nav.Item>
           <Nav.Item>
             <NavLink to="/contact" className="nav-link" activeclassname="active">Contact</NavLink>
@@ -48,13 +52,14 @@ function TabsExample() {
               <FaInstagram size={20} />
             </NavLink>
           </Nav.Item>
-          <NavDropdown className="dropdown" title="MEMBERS" id="basic-nav-dropdown">
+          <NavDropdown className="dropdown" title="SIGNUP/LOGIN" id="basic-nav-dropdown">
             <NavDropdown.Item as={NavLink} to="/login">Login</NavDropdown.Item>
             <NavDropdown.Item as={NavLink} to="/signup">Sign Up</NavDropdown.Item>
           </NavDropdown>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
+    </Container>
     </div>
   );
 }
