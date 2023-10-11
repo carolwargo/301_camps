@@ -4,6 +4,9 @@ import Home from './pages/Home';
 import Contact from './pages/Contact';
 import Train from './pages/Train';
 import Header from './components/Header';
+import Signup from './pages/Signup';
+import Consent from "./components/Consent/Consent";
+import TextConsent from "./components/Consent/TextConsent";
 
 
 /* Add signup and login imports and paths */
@@ -23,6 +26,9 @@ export default function App() {
         <Route path="/home" element={<Home />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/train" element={<Train />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/consent" element={<Consent />} />
+        <Route path="/textconsent" element={<TextConsent />} />
 
 {/* Add dashboard route after authentication */}
       </Routes>

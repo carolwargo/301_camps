@@ -30,11 +30,11 @@ export default function Home() {
                 UPCOMING <span>Events</span>
               </h2>
               <h5 className="pb-3">
-                Explore upcoming camps, clinics, and events with 301_CATCHING!
+                Explore upcoming sessions and events with 301_CATCHING!
                 <span style={{ color: "red" }}>
                   <br></br>Click "LEARN MORE"
                 </span>{" "}
-                to get started.
+                to see Available Sessions & Events.
               </h5>
               <div className="btn-container">
                 <NavLink to="/train" className="signup-btn">

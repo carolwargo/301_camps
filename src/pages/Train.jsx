@@ -1,5 +1,5 @@
 import React from "react";
-import "../style/train.css";
+
 import Container from "react-bootstrap/Container";
 import { Row, Col } from "react-bootstrap";
 

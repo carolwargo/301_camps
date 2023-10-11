@@ -1,55 +1,55 @@
-import React, { useState } from 'react';
-import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button';
+import React from "react";
+import { Row, Col } from "react-bootstrap";
+import CoverResize from "../assets/images/CoverResize.png";
+import SignUpForm from "../components/SignupForm";
 
-const SignUpForm = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Add your sign-up logic here
-    console.log('Sign-up form submitted:', email, password);
-  };
-
+export default function SignUp() {
   return (
-    <Form onSubmit={handleSubmit}>
-      <Form.Group controlId="email">
-        <Form.Label>Email address</Form.Label>
-        <Form.Control
-          type="email"
-          placeholder="Enter email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-      </Form.Group>
+    <div
+      style={{
+        backgroundImage: `url(${CoverResize})`,
+        height: "120vh",
+        backgroundSize: "cover",
 
-      <Form.Group controlId="password">
-        <Form.Label>Password</Form.Label>
-        <Form.Control
-          type="password"
-          placeholder="Password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-      </Form.Group>
+        padding: "3rem",
+        color: "white",
+      }}
+    >
+       <h1 style={{ fontSize: "4rem" }}>SIGN UP...</h1>
+      <Row >
+        <Col sm={5}>
+       
+        <br></br>
+        <p className="text-decoration-underline">Sign Up to Register</p>
 
-      <Form.Group controlId="confirmPassword">
-        <Form.Label>Confirm Password</Form.Label>
-        <Form.Control
-          type="password"
-          placeholder="Confirm Password"
-          value={confirmPassword}
-          onChange={(e) => setConfirmPassword(e.target.value)}
-        />
-      </Form.Group>
+        <p>
+          1. Complete the form & click the submit button to register for events.{" "}
+          <br></br>2. You'll be redirected to login. <br></br>3. Once logged in,
+          navigate to <a href="/clinics">Clinics</a> to register. <br></br>4.
+          Select the Clinic or Event of interest and click "Register" button.{" "}
+          <br></br>5. Be sure to save your login info to register for current &
+          future events.
+        </p>
 
-      <Button variant="primary" type="submit">
-        Sign Up
-      </Button>
-    </Form>
+        <div style={{ marginTop: "5rem" }}>
+          <p>
+            Already have an account? <a href="/login">Login</a>
+          </p>
+        </div>
+
+        </Col>
+        <Col sm={7}
+              style={{
+                paddingTop: "2rem",
+                paddingBottom : "10rem",
+                color: "white",
+              }}
+              >
+                <SignUpForm />
+        </Col>
+      </Row>
+    </div>
   );
-};
+}
 
-export default SignUpForm;
