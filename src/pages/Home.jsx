@@ -26,9 +26,9 @@ export default function Home() {
                 elevate their game.
               </h4>
 
-              <h2 className="pt-3 mt-4 pb-2 text-decoration-underline">
+              <h4 className="pt-3 mt-4 pb-2 text-decoration-underline">
                 UPCOMING <span>Events</span>
-              </h2>
+              </h4>
               <h5 className="pb-3">
                 Explore upcoming sessions and events with 301_CATCHING!
                 <span style={{ color: "red" }}>

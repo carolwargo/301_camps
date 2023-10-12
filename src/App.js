@@ -8,7 +8,7 @@ import Signup from './pages/Signup';
 import Consent from "./components/Consent/Consent";
 import TextConsent from "./components/Consent/TextConsent";
 import Register from "./components/Train/Registration/Register";
-import DigitalWaiver from "./components/Train/Registration/DigitalWaiver";
+import Waiver from "./components/Train/Registration/Waiver";
 
 
 /* Add signup and login imports and paths */
@@ -32,7 +32,7 @@ export default function App() {
         <Route path="/consent" element={<Consent />} />
         <Route path="/textconsent" element={<TextConsent />} />
         <Route path="/register" element={<Register/>} />
-        <Route path="/digitalwaiver" element={<DigitalWaiver />} />
+        <Route path="/waiver" element={<Waiver />} />
 
 {/* Add dashboard route after authentication */}
       </Routes>

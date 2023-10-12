@@ -1,7 +1,8 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 import Container from "react-bootstrap/Container";
-import { Row, Col, NavLink } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
 
 export default function FormFileExample() {
   return (
@@ -71,7 +72,21 @@ export default function FormFileExample() {
                   </h6>
                 </Col>
                 <Col className="mt-5">
-                <NavLink to="/register-form">
+                <NavLink
+            to="/about"
+            className="btn custom-button"
+            style={{
+    
+              backgroundColor: "white",
+              border: "none",
+              color: "black",
+              boxShadow: "2px 2px 4px rgba(255, 255, 255, 0.3)", // Lighter shadow color
+              transition: "background-color 0.6s ease, box-shadow 0.3s ease", // Add hover transitions
+            }}
+          >
+           Register & Pay
+          </NavLink>
+                <NavLink to="/register">
     <button className="btn btn-primary">Register & Pay</button>
   </NavLink>
                 </Col>
@@ -191,7 +206,7 @@ export default function FormFileExample() {
             >
               <Row>
                 <Col md={5}>
-                  <h4>GROUP SESSION</h4>
+                  <h4>GROUP Winter Session #1</h4>
                   <h4>DESCRIPTION:</h4>
                 </Col>
                 <Col>
