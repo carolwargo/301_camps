@@ -18,20 +18,27 @@ export default function Registration() {
 
         return (
             <div >
-                <Container >
+                <Container className="bg-black text-white">
                 <Row className="p-5">
                     <Col md={5}>
-                <h1>REGISTER</h1>
-                <h3>Individual- single session</h3>
-                <h5><strong>$75.00</strong><span> <p> 1 hour catching instruction
-                    </p></span></h5>
+                <h1>REGISTRATION</h1>
+                <p  style={{color: 'red'}}>INDIVIDUAL<br></br>SINGLE SESSION- <strong> $75.00</strong> </p>
+             
+
+                   <li>1 hour</li>
+                   <li>1 Player</li>
+                   <li>1 Coach</li>
                
                 
-                <h5 className="text-decoration-underline"> <strong>FUNDAMENTALS</strong></h5>
+                <h5 className="text-decoration-underline mt-3"> <strong>FUNDAMENTALS</strong></h5>
                     
                     <li>receiving</li>
                     <li>blocking</li>
                     <li>stance</li>
+                    <li>throwing</li>
+                    <li>mobility</li>
+                    <li>mindset</li>
+                    <li>situational preparation</li>
               
                 </Col>
                <Col md={7}>

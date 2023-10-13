@@ -23,14 +23,6 @@ I am voluntarily electing to participate in this activity with full knowledge of
 
 I have read this release and waiver of liability and fully understand its terms. I understand that I am giving up substantial rights, including my right to sue. I acknowledge that I am signing the agreement freely and voluntarily, and intend by my signature to be a complete and unconditional release of all liability to the greatest extent allowed by law.
 
-Signature: ________________________________________
-Date: ____________________
-
-[Printed Name]
-[Address]
-[City, State, Zip]
-[Email Address]
-[Phone Number]
 
         </p>
         <label htmlFor="agreeCheckbox">

@@ -11,13 +11,54 @@ const SignUpForm = () => {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [isConsentGiven, setIsConsentGiven] = useState(false);
+  const [emailError, setEmailError] = useState("");
+  const [passwordError, setPasswordError] = useState("");
 
-  const handleSubmit = (e) => {
+  const validateEmail = (email) => {
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(email);
+  };
+
+  const validatePassword = (password) => {
+    return password.length >= 8;
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (isConsentGiven) {
-      console.log("Sign-up form submitted:", email, password);
-      // Add your sign-up logic here
+      if (validateEmail(email) && validatePassword(password)) {
+        try {
+          const response = await fetch('/api/users', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              first,
+              last,
+              email,
+              cellPhone,
+              password,
+              confirmPassword,
+              isConsentGiven,
+            }),
+          });
+
+          if (response.ok) {
+            console.log('Sign-up successful');
+            // Add any further logic for successful signup
+          } else {
+            console.error('Error signing up:', response.status, response.statusText);
+            // Handle error response from server
+          }
+        } catch (error) {
+          console.error('Error:', error);
+        }
+      } else {
+        setEmailError("Please enter a valid email address.");
+        setPasswordError("Password must be at least 8 characters long.");
+      }
     } else {
       alert("Please provide your consent before submitting.");
     }
@@ -39,7 +80,7 @@ const SignUpForm = () => {
           borderRadius: "10px",
         }}
       >
-        <Form onSubmit={handleSubmit}>
+         <Form onSubmit={handleSubmit}>
           <Row>
             <Col md={6}>
               <Form.Group controlId="first">
@@ -68,7 +109,7 @@ const SignUpForm = () => {
           </Row>
 
           <Row>
-            <Col md={6}>
+          <Col md={6}>
               <Form.Group controlId="email">
                 <Form.Label>Email address</Form.Label>
                 <Form.Control
@@ -78,6 +119,7 @@ const SignUpForm = () => {
                   onChange={(e) => setEmail(e.target.value)}
                   className="form-control"
                 />
+                {emailError && <span className="text-danger">{emailError}</span>}
               </Form.Group>
             </Col>
             <Col md={6}>
@@ -95,7 +137,7 @@ const SignUpForm = () => {
           </Row>
 
           <Row>
-            <Col md={6}>
+          <Col md={6}>
               <Form.Group controlId="password">
                 <Form.Label>Password</Form.Label>
                 <Form.Control
@@ -105,8 +147,10 @@ const SignUpForm = () => {
                   onChange={(e) => setPassword(e.target.value)}
                   className="form-control"
                 />
+                {passwordError && <span className="text-danger">{passwordError}</span>}
               </Form.Group>
             </Col>
+
             <Col md={6}>
               <Form.Group controlId="confirmPassword">
                 <Form.Label>Confirm Password</Form.Label>
@@ -153,9 +197,9 @@ const SignUpForm = () => {
               </Form.Group>
             </Col>
             <Col>
-              <Button variant="dark" type="submit" className="w-100 mt-4">
-                Sign Up
-              </Button>
+            <Button variant="dark" type="submit" className="w-100 mt-4">
+            Sign Up
+          </Button>
             </Col>
           </Row>
         </Form>
